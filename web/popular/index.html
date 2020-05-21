@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "javascript.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="sidenav">
+    <b id = "webpagetitle">Watchwhatmovie</b>
+    <a href="/popular/popular.html">POPULAR</a>
+    <a href="index.html">DISCOVER</a>
+    <a href="/latest/latest.html">LATEST</a>
+    <a href="/trend/trend.html">WEEK'S TREND</a>
+  </div>
+
+  <div class="main">
+    <div class = "justformargin">
+      <div class="wrapper">
+        <a>Movies</a>
+        <ul id = "ulMV" class="carousel" data-target="carousel">
+
+        </ul>
+      </div>
+      <div class="button-wrapper">
+        <button onclick="countLeftMovie()" class = "button-left" data-action="slideLeft"><img style = "width:23px;height: 23px;"src = "/web/images/arrow-left.svg"></button>
+        <button onclick="countRightMovie()" class = "button-right" data-action="slideRight"><img style = "width:23px;height: 23px;"src = "/web/images/arrow-right.svg"></button>
+      </div>
+    </div>
+    <div class = "justformargin2">
+      <div class="wrapper">
+        <a>TV Shows</a>
+        <ul id = "ulTV" class="carousel" data-target="carousel2">
+          
+        </ul>
+      </div>
+      <div class="button-wrapper">
+        <button onclick="countLeftTV()" class = "button-left" data-action="slideLeft2"><img style = "width:23px;height: 23px;"src = "/web/images/arrow-left.svg"></button>
+        <button onclick="countRightTV()" class = "button-right" data-action="slideRight2"><img style = "width:23px;height: 23px;"src = "/web/images/arrow-right.svg"></button>
+      </div>
+      
+    </div>
+  </div>
+</body>
+<script src = "something.js"></script>
+</html>

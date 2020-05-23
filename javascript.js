@@ -12,7 +12,9 @@ fetch(BASEURL+"/movie/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
         console.log(data);
         for(i=0;i<=19;i++){
             var listElement = document.createElement("li");
-            var textElement = document.createElement("a");
+            var textElement = document.createElement("p");
+            var linkElement = document.createElement("a");
+            linkElement.setAttribute("href","/web/window/window.html");
             var textContent = document.createTextNode(data.results[i].original_title);
             textElement.appendChild(textContent);
             listElement.setAttribute("class", "card");
@@ -20,20 +22,21 @@ fetch(BASEURL+"/movie/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
             var imgElement = document.createElement("IMG");
             var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
             imgElement.setAttribute("src",imgPath)
-            listElement.appendChild(imgElement)
+            linkElement.appendChild(imgElement);
+            listElement.appendChild(linkElement);
             listElement.appendChild(textElement);
             document.getElementById("ulMV").appendChild(listElement);
         }
     })
 
 var countMovie = 0;
-var updateNumber = 14;
+var updateNumberMV = 14;
 var x = 2;
 console.log(countMovie);
 function countRightMovie(){
     countMovie++;
     console.log(countMovie);
-    if(countMovie == updateNumber){
+    if(countMovie == updateNumberMV){
         console.log('update');
         fetch(BASEURL+"/movie/popular?api_key="+APIKEY+"&language=en-US&page="+x)
             .then(response => response.json())
@@ -41,7 +44,9 @@ function countRightMovie(){
                 console.log(data);
                 for(i=0;i<=19;i++){
                     var listElement = document.createElement("li");
-                    var textElement = document.createElement("a");
+                    var textElement = document.createElement("p");
+                    var linkElement = document.createElement("a");
+                    linkElement.setAttribute("href","/web/window/window.html");
                     var textContent = document.createTextNode(data.results[i].original_title);
                     textElement.appendChild(textContent);
                     listElement.setAttribute("class", "card");
@@ -49,12 +54,13 @@ function countRightMovie(){
                     var imgElement = document.createElement("IMG");
                     var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
                     imgElement.setAttribute("src",imgPath)
-                    listElement.appendChild(imgElement)
+                    linkElement.appendChild(imgElement);
+                    listElement.appendChild(linkElement);
                     listElement.appendChild(textElement);
                     document.getElementById("ulMV").appendChild(listElement);
                 }
             })
-        updateNumber += 14;
+        updateNumberMV += 14;
         x++;
     }
     return countMovie;
@@ -77,28 +83,32 @@ fetch(BASEURL+"/tv/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
         console.log(data);
         for(i=0;i<=19;i++){
             var listElement = document.createElement("li");
-            var textElement = document.createElement("a");
+            var textElement = document.createElement("p");
+            var linkElement = document.createElement("a");
+            linkElement.setAttribute("href","/web/window/window.html");
             var textContent = document.createTextNode(data.results[i].original_name);
             textElement.appendChild(textContent);
+            linkElement.setAttribute("href","/window/window.html");
             listElement.setAttribute("class", "card");
             listElement.setAttribute("data-target", "card")
             var imgElement = document.createElement("IMG");
             var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
             imgElement.setAttribute("src",imgPath)
-            listElement.appendChild(imgElement)
+            linkElement.appendChild(imgElement);
+            listElement.appendChild(linkElement);
             listElement.appendChild(textElement);
             document.getElementById("ulTV").appendChild(listElement);
         }
     })
 
 var countTV = 0;
-var updateNumber = 14;
+var updateNumberTV = 14;
 var y = 2;
 console.log(countTV);
 function countRightTV(){
     countTV++;
     console.log(countTV);
-    if(countTV == updateNumber){
+    if(countTV == updateNumberTV){
         console.log('update');
         fetch(BASEURL+"/tv/popular?api_key="+APIKEY+"&language=en-US&page="+y)
             .then(response => response.json())
@@ -106,7 +116,9 @@ function countRightTV(){
                 console.log(data);
                 for(i=0;i<=19;i++){
                     var listElement = document.createElement("li");
-                    var textElement = document.createElement("a");
+                    var textElement = document.createElement("p");
+                    var linkElement = document.createElement("a");
+                    linkElement.setAttribute("href","/web/window/window.html");
                     var textContent = document.createTextNode(data.results[i].original_name);
                     textElement.appendChild(textContent);
                     listElement.setAttribute("class", "card");
@@ -114,12 +126,13 @@ function countRightTV(){
                     var imgElement = document.createElement("IMG");
                     var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
                     imgElement.setAttribute("src",imgPath)
-                    listElement.appendChild(imgElement)
+                    linkElement.appendChild(imgElement);
+                    listElement.appendChild(linkElement);
                     listElement.appendChild(textElement);
                     document.getElementById("ulTV").appendChild(listElement);
                 }
             })
-        updateNumber += 14;
+        updateNumberTV += 14;
         y++;
     }
     return countTV;

@@ -120,11 +120,28 @@ body {
     width: 186px;
     height: 279.3px;
 }
-.card a{
+.card p{
+    color: white;
+    font-weight: 700;
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: outside;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 2px;
     display:inline-block;
     font-size: 16px;
     width: 100%;
     text-align: center;
     overflow:hidden;
     text-overflow:  ellipsis;
+    z-index: 1;
+}
+.card a{
+    width: 186px;
+    height: 279.281px;
+    display: inline-block;
+    z-index: 12;
+    position: relative;
+    
 }

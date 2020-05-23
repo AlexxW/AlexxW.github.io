@@ -13,7 +13,7 @@ const rightButton = document.querySelector("[data-action='slideRight']");
 const carouselWidth = carousel.offsetWidth;
 //const cardStyle = card.currentStyle || window.getComputedStyle(card)
 const cardMarginRight = 48;
-
+//asd
 // Count the number of total cards you have
 const cardCount = carousel.querySelectorAll("[data-target='card']").length;
 

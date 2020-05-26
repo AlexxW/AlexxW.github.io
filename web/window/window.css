@@ -1,0 +1,52 @@
+body {
+    background-color: #414141;
+    font-family: 'Nunito';
+}
+#webpagetitle{
+    color:#CA3E47;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:60px;
+    text-decoration: none;
+    font-size: 27px;
+    display: block;
+    font-weight: 800;
+
+}
+.sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    overflow-x: hidden;
+    padding-top: 35px;
+    box-shadow: 9px 0px 30px #313131;
+}
+
+.sidenav a {
+    text-align: center;
+    padding-top:30.5px;
+    padding-bottom:30.5px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #818181;
+    display: block;
+    font-weight: bold;
+}
+  
+.sidenav a:hover {
+    color: white;
+}
+  
+.main {
+    margin-left: 260px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

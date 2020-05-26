@@ -86,8 +86,20 @@ body {
     padding: 0;
     list-style: none;
     width: 100%;
+    height: 375px;
     display: flex;
-    position: absolute;
+    position: relative;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.carousel2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 375px;
+    display: flex;
+    position: relative;
     left: 0;
     transition: all 0.5s ease;
 }
@@ -97,7 +109,16 @@ body {
     min-width: 186px;
     height: 330px;
     margin-right: 48px;
-    display: inline-block;
+    z-index:1;
+    transition: all 0.5s ease;
+}
+.card2 {
+    margin-top:45px;
+    min-width: 186px;
+    height: 330px;
+    margin-right: 48px;
+    z-index:1;
+    transition: all 0.5s ease;
 }
 
 .button-left{
@@ -135,13 +156,41 @@ body {
     text-align: center;
     overflow:hidden;
     text-overflow:  ellipsis;
-    z-index: 1;
 }
 .card a{
     width: 186px;
     height: 279.281px;
     display: inline-block;
-    z-index: 12;
     position: relative;
-    
+    width:186px;
+    height:279.250px;
+}
+
+.card2 img{
+    width: 186px;
+    height: 279.3px;
+}
+.card2 p{
+    color: white;
+    font-weight: 700;
+    list-style-image: none;
+    list-style-type: none;
+    list-style-position: outside;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 2px;
+    display:inline-block;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    overflow:hidden;
+    text-overflow:  ellipsis;
+}
+.card2 a{
+    width: 186px;
+    height: 279.281px;
+    display: inline-block;
+    position: relative;
+    width:186px;
+    height:279.250px;
 }

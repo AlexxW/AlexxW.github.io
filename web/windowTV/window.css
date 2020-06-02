@@ -1,0 +1,221 @@
+html{
+    height:100%;
+}
+body {
+    background-color: #414141;
+    font-family: 'Nunito';
+    margin:0px;
+    height: 100%;
+    overflow: hidden;
+}
+#webpagetitle{
+    color:#CA3E47;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:60px;
+    text-decoration: none;
+    font-size: 27px;
+    display: block;
+    font-weight: 800;
+
+}
+.sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    overflow-x: hidden;
+    padding-top: 35px;
+    box-shadow: 9px 0px 30px #313131;
+}
+
+.sidenav a {
+    text-align: center;
+    padding-top:30.5px;
+    padding-bottom:30.5px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #818181;
+    display: block;
+    font-weight: bold;
+}
+  
+.sidenav a:hover {
+    color: white;
+}
+  
+.main {
+    margin-left: 260px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    height: 100%;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#background-image{
+    display:block;
+    left: 0;
+    margin: 0px;
+    height: 100%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    right: 0;
+    z-index: 1;
+    position: relative;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.content{
+    position: relative;
+    z-index: 100;
+}
+#glass{
+    left: 0;
+    right: 0;
+    margin: 0px;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.77;
+    background-color: black;
+    position: absolute;
+}
+.main{
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    color:white;
+    width: 86.45%;
+    display: flex;
+}
+
+#right{
+    flex:1;
+}
+#left{
+    flex:1;
+}
+#title{
+    font-family: 'Nunito';
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 17.8%;
+    margin-left:4.19%;
+    margin-bottom: 0.5%;
+}
+#genres_div{
+    margin-bottom:4%;
+}
+#genre0{
+    font-weight: 400;
+    font-size: 25px;
+    color:#828282;
+    margin-left:4.19%;
+    margin-right: 2%;
+    display: inline;
+    
+}
+#genre1{
+    font-weight: 400;
+    font-size: 25px;
+    color:#828282;
+    margin-right: 2%;
+    display: inline;
+    
+}
+#genre2{
+    font-weight: 400;
+    font-size: 25px;
+    color:#828282;
+    margin-right: 2%;
+    display: inline;
+    
+}
+#genre3{
+    font-weight: 400;
+    font-size: 25px;
+    color:#828282;
+    margin-right: 2%;
+    display: inline;
+
+}
+#rd{
+    font-size: 25px;
+    font-weight: 400;
+    display: inline;
+    margin-left: 4.19%;
+}
+#releaseDate{
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 4.19%;
+    margin-top:0px;
+}
+#some_div{
+    margin-top:2.12%;
+}
+#runtime{
+    font-weight: 400;
+    font-size: 25px;
+    display: inline;
+    margin-left:18%;
+}
+.column img{
+    width: 4.791vw;
+    height: 12.77%;
+}
+#row1{
+    width:100%
+}
+#row2{
+    
+    width: 100%;
+}
+.column{
+    float:left;
+    width:12%;
+    padding-right:20px;
+    padding-bottom:20px;
+    height:100%;
+    font-size: 16px;
+}
+#row1:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+#row2:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+#container{
+    margin-left:4.19%;
+    width:100%;
+    height: 38.88%;
+}
+#cast_p{
+    margin-left: 4.19%;
+    font-size:18px;
+    margin-bottom:5px;
+    margin-top: 100px;;
+}
+#trailer_p{
+    margin-top:25%;
+    font-size: 40px;
+    margin-bottom: .5%;
+}
+#nrseasons_p{
+    margin-left: 4.19%;
+    font-size: 25px;
+    font-weight: 400;
+}
+

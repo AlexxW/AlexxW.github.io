@@ -20,6 +20,7 @@ fetch(BASEURL+"/tv/"+id+"?api_key="+APIKEY+"&language=en-US")
         var title = document.createTextNode(data.name);
         var p_title = document.getElementById("title")
         p_title.appendChild(title)
+        document.title = data.name
 
         //runtime
        

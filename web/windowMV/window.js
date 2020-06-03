@@ -18,6 +18,7 @@ fetch(BASEURL+"/movie/"+id+"?api_key="+APIKEY+"&language=en-US")
         var title = document.createTextNode(data.original_title);
         var p_title = document.getElementById("title")
         p_title.appendChild(title)
+        document.title = data.original_title
 
         //runtime
         var hour = data.runtime / 60;

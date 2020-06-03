@@ -28,11 +28,13 @@ ready(function(){
   // Define an offset property to dynamically update by clicking the button controls
   // as well as a maxX property so the carousel knows when to stop at the upper limit
   let offset = 0;
-
   // Add the click events
   leftButton.addEventListener("click", function() {
     if (offset !== 0) {
-      offset += 234;
+      if(screen.width <= 768)
+        offset+=180;
+      else
+        offset += 234;
       for(var x = 0;x<card.length;x++){
         card[x].style.transform = `translateX(${offset}px)`;
       }
@@ -40,7 +42,10 @@ ready(function(){
   })
     
   rightButton.addEventListener("click", function() {
-    offset -= 234;
+    if(screen.width <= 768)
+      offset-=180;
+    else
+      offset -= 234;
     for(var x = 0;x<card.length;x++){
       card[x].style.transform = `translateX(${offset}px)`;
     }
@@ -70,7 +75,10 @@ ready(function(){
   // Add the click events
   leftButton2.addEventListener("click", function() {
     if (offset2 !== 0) {
-      offset2 += 234;
+      if(screen.width <= 768)
+        offset2+=180;
+      else
+        offset2 += 234;
       for(var x = 0;x<card2.length;x++){
         card2[x].style.transform = `translateX(${offset2}px)`;
       }
@@ -78,7 +86,10 @@ ready(function(){
   })
     
   rightButton2.addEventListener("click", function() {
-    offset2 -= 234;
+    if(screen.width <= 768)
+      offset2-=180;
+    else
+      offset2-= 234;
     for(var x = 0;x<card2.length;x++){
       card2[x].style.transform = `translateX(${offset2}px)`;
     }

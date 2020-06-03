@@ -1,7 +1,8 @@
 
 const APIKEY = "2f62dc6577fbb0e3e401e077404707a6";
 const BASEURL = "https://api.themoviedb.org/3";
-var id = localStorage.getItem("id")
+let params = new URLSearchParams(location.search);
+var id = params.get('id')
 fetch(BASEURL+"/tv/"+id+"?api_key="+APIKEY+"&language=en-US")
     .then(response => response.json())
     .then(data =>{
@@ -101,7 +102,7 @@ fetch(BASEURL+"/tv/"+id+"/credits?api_key="+APIKEY)
             row_div.appendChild(column_div)
         }
         for(i=5;i<=9;i++){
-            if(data.cast[i] != null){
+            if(data.cast[i].name != null){
                 var castName = document.createTextNode(data.cast[i].name)
                 var castPath = document.createElement("img")
                 castPath.setAttribute("src","https://image.tmdb.org/t/p/w154"+data.cast[i].profile_path)

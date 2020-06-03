@@ -6,7 +6,7 @@ body {
     font-family: 'Nunito';
     margin:0px;
     height: 100%;
-    overflow: hidden;
+    
 }
 #webpagetitle{
     color:#CA3E47;
@@ -213,4 +213,198 @@ body {
     font-size: 40px;
     margin-bottom: .5%;
 }
+@media only screen and (max-width: 768px) {
+    #header_div{
+        width:80%;
+        margin:auto;
 
+    }
+    #webpagetitle{
+        color:#CA3E47;
+        text-align: center;
+        margin:0;
+        padding-top: 0px;
+        text-decoration: none;
+        font-size: 22px;
+        display: block;
+        font-weight: 800;
+        padding-bottom:0px;
+    }
+    .sidenav {
+        height: 10%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #313131;
+        overflow-x: hidden;
+        padding-top:0;
+        box-shadow: 9px 0px 30px #313131;
+    }
+    .sidenav a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        color: #818181;
+        display: inline-block;
+        font-weight: bold;
+        margin-left:5%;
+        margin-right: 5%;
+        margin-top:15px;
+        padding:0;
+        
+
+    }
+    .main {
+        margin-left:0px;
+        margin-top:100px;
+        padding:0px;
+        overflow: scroll;
+        position: fixed;
+        top: 0px;
+        z-index: 3;
+        color:white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        position: relative;
+        z-index: 100;
+    }
+    #background-image{
+        display:block;
+        left: 0;
+        margin: 0px;
+        height: 100%;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: 250vw 200vw;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        right: 0;
+        z-index: 1;
+        position: relative;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+    #title{
+        font-family: 'Nunito';
+        font-weight: 800;
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    #genres_div{
+        text-align: center;
+        width: 100%;
+    }
+    #genre0{
+        font-weight: 400;
+        font-size: 16px;
+        color:#828282;
+        margin-left:4.19%;
+        margin-right: 2%;
+        display: inline;
+        
+    }
+    #genre1{
+        font-weight: 400;
+        font-size: 16px;
+        color:#828282;
+        margin-right: 2%;
+        display: inline;
+        
+    }
+    #genre2{
+        font-weight: 400;
+        font-size: 16px;
+        color:#828282;
+        margin-right: 2%;
+        display: inline;
+        
+    }
+    #genre3{
+        font-weight: 400;
+        font-size: 16px;
+        color:#828282;
+        margin-right: 2%;
+        display: inline;
+    
+    }
+    #right{
+        flex:1;
+        width: 100%;
+    }
+    #left{
+        flex:1;
+    }
+    #rd{
+        font-size: 15px;
+        font-weight: 400;
+        display: inline;
+        margin-left: 4.19%;
+    }
+    #releaseDate{
+        font-weight: 400;
+        font-size: 11px;
+        margin-left: 14.5%;
+        margin-top:0px;
+    }
+    #some_div{
+        margin-top:2.12%;
+    }
+    #rdruntime{
+        width: 100%;
+        margin-left:10%;
+    }
+    #runtime{
+        font-weight: 400;
+        font-size: 15px;
+        display: inline;
+        margin-left:30%;
+    }
+    .column img{
+        width: 130%;
+        height: 130%;
+    }
+    .column{
+        float:left;
+        width:12%;
+        padding-right:7%;
+        padding-bottom:5%;
+        height:100%;
+        font-size: 10px;
+        text-align: center;
+    }
+    #row1:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    #row2:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    #cast_p{
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        font-size:18px;
+        margin-bottom:5px;
+        margin-top: 10px;;
+    }
+    #trailer_p{
+        margin-top:0;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: .5%;
+    }
+    #iframe-div iframe{
+        margin-left: 4%;
+    }
+
+}

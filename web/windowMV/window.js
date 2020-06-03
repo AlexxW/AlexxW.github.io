@@ -1,7 +1,10 @@
 
 const APIKEY = "2f62dc6577fbb0e3e401e077404707a6";
 const BASEURL = "https://api.themoviedb.org/3";
-var id = localStorage.getItem("id")
+
+
+let params = new URLSearchParams(location.search);
+var id = params.get('id')
 fetch(BASEURL+"/movie/"+id+"?api_key="+APIKEY+"&language=en-US")
     .then(response => response.json())
     .then(data =>{
@@ -35,8 +38,14 @@ fetch(BASEURL+"/movie/"+id+"/videos?api_key="+APIKEY+"&language=en-US")
 
         //video key
         var video_iframe = document.createElement("iframe")
-        video_iframe.setAttribute("width","764")
-        video_iframe.setAttribute("height","430")
+        if(screen.width <= 768){
+            video_iframe.setAttribute("width","350")
+            video_iframe.setAttribute("height","200")
+        }
+        else{
+            video_iframe.setAttribute("width","764")
+            video_iframe.setAttribute("height","430")
+        }
         video_iframe.setAttribute("src","https://www.youtube.com/embed/"+data.results[0].key)
         video_iframe.setAttribute("frameborder","0")
         video_iframe.setAttribute("id","video_iframe")

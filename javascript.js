@@ -1,8 +1,8 @@
 //2f62dc6577fbb0e3e401e077404707a6
 
+
 const APIKEY = "2f62dc6577fbb0e3e401e077404707a6";
 const BASEURL = "https://api.themoviedb.org/3";
-
 
 //***********POPULAR**************//
 //***********MOVIES**************//
@@ -17,10 +17,10 @@ fetch(BASEURL+"/movie/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
             var linkElement = document.createElement("a");
             var textContent = document.createTextNode(data.results[i].original_title);
             textElement.appendChild(textContent);
-            linkElement.setAttribute('href','/web/windowMV/window.html')
+            var myURL = "/web/windowMV/window.html?id="+id
+            linkElement.setAttribute('href', myURL)
             listElement.setAttribute("class", "card");
             listElement.setAttribute("data-target", "card")
-            listElement.setAttribute("onClick","createWindow("+id+")");
             var imgElement = document.createElement("IMG");
             var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
             imgElement.setAttribute("src",imgPath)
@@ -51,10 +51,10 @@ function countRightMovie(){
                     var linkElement = document.createElement("a");
                     var textContent = document.createTextNode(data.results[i].original_title);
                     textElement.appendChild(textContent);
-                    linkElement.setAttribute('href','/web/windowMV/window.html')
+                    var myURL = "/web/windowMV/window.html?id="+id
+                    linkElement.setAttribute('href', myURL)
                     listElement.setAttribute("class", "card");
                     listElement.setAttribute("data-target", "card")
-                    listElement.setAttribute("onClick","createWindow("+id+")");
                     var imgElement = document.createElement("IMG");
                     var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
                     imgElement.setAttribute("src",imgPath)
@@ -92,10 +92,10 @@ fetch(BASEURL+"/tv/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
             var linkElement = document.createElement("a");
             var textContent = document.createTextNode(data.results[i].original_name);
             textElement.appendChild(textContent);
-            linkElement.setAttribute('href','/web/windowTV/window.html')
+            var myURL = "/web/windowTV/window.html?id="+id
+            linkElement.setAttribute('href', myURL)
             listElement.setAttribute("class", "card2");
             listElement.setAttribute("data-target", "card2")
-            listElement.setAttribute("onClick","createWindow("+id+")");
             var imgElement = document.createElement("IMG");
             var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
             imgElement.setAttribute("src",imgPath)
@@ -126,10 +126,10 @@ function countRightTV(){
                     var linkElement = document.createElement("a");
                     var textContent = document.createTextNode(data.results[i].original_name);
                     textElement.appendChild(textContent);
-                    linkElement.setAttribute('href','/web/windowTV/window.html')
+                    var myURL = "/web/windowTV/window.html?id="+id
+                    linkElement.setAttribute('href', myURL)
                     listElement.setAttribute("class", "card2");
                     listElement.setAttribute("data-target", "card2")
-                    listElement.setAttribute("onClick","createWindow("+id+")");
                     var imgElement = document.createElement("IMG");
                     var imgPath = "https://image.tmdb.org/t/p/w780"+data.results[i].poster_path;
                     imgElement.setAttribute("src",imgPath)

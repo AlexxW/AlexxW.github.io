@@ -10,7 +10,7 @@ fetch(BASEURL+"/movie/"+id+"?api_key="+APIKEY+"&language=en-US")
     .then(data =>{
 
         //backdrop
-        console.log(data.backdrop_path)
+        
         var background_image = document.getElementById('background-image')
         background_image.style.backgroundImage = "url('https://image.tmdb.org/t/p/original"+data.backdrop_path+"')"
         
@@ -57,7 +57,7 @@ fetch(BASEURL+"/movie/"+id+"/credits?api_key="+APIKEY)
     .then(data =>{
         //cast
         for(i=0;i<=4;i++){
-            console.log(data.cast[i].name)
+            
             var castName = document.createTextNode(data.cast[i].name)
             var castPath = document.createElement("img")
             castPath.setAttribute("src","https://image.tmdb.org/t/p/w154"+data.cast[i].profile_path)
@@ -69,7 +69,7 @@ fetch(BASEURL+"/movie/"+id+"/credits?api_key="+APIKEY)
             row_div.appendChild(column_div)
         }
         for(i=5;i<=9;i++){
-            console.log(data.cast[i].name)
+            
             var castName = document.createTextNode(data.cast[i].name)
             var castPath = document.createElement("img")
             castPath.setAttribute("src","https://image.tmdb.org/t/p/w154"+data.cast[i].profile_path)
@@ -86,7 +86,7 @@ fetch(BASEURL+"/genre/movie/list?api_key="+APIKEY+"&language=en-US")
     .then(response=>response.json())
     .then(data => {
         if(data.genres[0] != null)
-            console.log(data.genres[0].name)
+            
             var genre1 = document.createTextNode(data.genres[0].name)
             var para = document.createElement('p')
             para.appendChild(genre1)
@@ -94,7 +94,7 @@ fetch(BASEURL+"/genre/movie/list?api_key="+APIKEY+"&language=en-US")
             para.setAttribute("id","genre0")
             genres_div.appendChild(para)
         if(data.genres[1] != null)
-            console.log(data.genres[1].name)
+            
             var genre1 = document.createTextNode(data.genres[1].name)
             var para = document.createElement('p')
             para.appendChild(genre1)
@@ -102,7 +102,7 @@ fetch(BASEURL+"/genre/movie/list?api_key="+APIKEY+"&language=en-US")
             para.setAttribute("id","genre1")
             genres_div.appendChild(para)
         if(data.genres[2] != null)
-            console.log(data.genres[2].name)
+            
             var genre1 = document.createTextNode(data.genres[2].name)
             var para = document.createElement('p')
             para.appendChild(genre1)
@@ -110,7 +110,7 @@ fetch(BASEURL+"/genre/movie/list?api_key="+APIKEY+"&language=en-US")
             para.setAttribute("id","genre2")
             genres_div.appendChild(para)
         if(data.genres[3] != null)
-            console.log(data.genres[3].name)
+            
             var genre1 = document.createTextNode(data.genres[3].name)
             var para = document.createElement('p')
             para.appendChild(genre1)

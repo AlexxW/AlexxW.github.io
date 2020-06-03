@@ -6,7 +6,7 @@ const BASEURL = "https://api.themoviedb.org/3";
 
 //***********POPULAR**************//
 //***********MOVIES**************//
-fetch(BASEURL+"/movie/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
+fetch(BASEURL+"/trending/movie/week?api_key="+APIKEY)
     .then(response => response.json())
     .then(data =>{
         
@@ -40,7 +40,7 @@ function countRightMovie(){
     
     if(countMovie == updateNumberMV){
         
-        fetch(BASEURL+"/movie/popular?api_key="+APIKEY+"&language=en-US&page="+x)
+        fetch(BASEURL+"/trending/movie/week?api_key="+APIKEY+"&language=en-US&page="+x)
             .then(response => response.json())
             .then(data =>{
                 
@@ -81,7 +81,7 @@ function countLeftMovie(){
 //***********POPULAR**************//
 //***********TV SHOWS**************//
 
-fetch(BASEURL+"/tv/popular?api_key="+APIKEY+"&language=en-US&page="+"1")
+fetch(BASEURL+"/trending/tv/week?api_key="+APIKEY)
     .then(response => response.json())
     .then(data =>{
         
@@ -115,7 +115,7 @@ function countRightTV(){
     
     if(countTV == updateNumberTV){
         
-        fetch(BASEURL+"/tv/popular?api_key="+APIKEY+"&language=en-US&page="+y)
+        fetch(BASEURL+"/trending/tv/week?api_key="+APIKEY+"&language=en-US&page="+y)
             .then(response => response.json())
             .then(data =>{
                 
@@ -150,7 +150,4 @@ function countLeftTV(){
         
         return countTV;
     }
-}
-function createWindow(id) {
-    localStorage.setItem("id",id)
 }
